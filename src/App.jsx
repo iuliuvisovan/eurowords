@@ -275,12 +275,15 @@ function App() {
             data.coordinates[1] + (labelOffsets[code]?.lat || 0),
           ]
           const labelDx = labelOffsets[code]?.dx || 0
+          const sizeFactor = data.sizeFactor || 5
+          const fontSize = 7 + sizeFactor * 0.6 + (isSelected ? 2 : 0)
           return (
             <Marker key={code} coordinates={labelCoords}>
               <text
                 textAnchor="middle"
                 className={`country-label ${isSelected ? 'selected' : ''}`}
                 dx={labelDx}
+                style={{ fontSize: `${fontSize}px` }}
               >
                 <tspan className="label-flag">
                   {getFlagEmoji(code)}
