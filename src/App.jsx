@@ -168,38 +168,46 @@ function App() {
       >
         <Geographies geography={geoUrl}>
           {({ geographies }) =>
-            geographies.map((geo) => (
-              <Geography
-                key={geo.rsmKey}
-                geography={geo}
-                fill={getCountryFill(geo)}
-                stroke="#90a4b8"
-                strokeWidth={0.5}
-                onClick={() => handleGeoClick(geo)}
-                onMouseEnter={() => {
-                  const code = geoNameToCode[geo.properties.name] || null
-                  setHoveredCountry(getHoverLabel(geo))
-                  setHoveredCountryCode(code)
-                }}
-                onMouseLeave={() => {
-                  setHoveredCountry(null)
-                  setHoveredCountryCode(null)
-                }}
-                onMouseMove={(event) => {
-                  setCursorPos({ x: event.clientX, y: event.clientY })
-                }}
-                className={isClickable(geo) ? 'clickable' : ''}
-                style={{
-                  default: { outline: 'none' },
-                  hover: {
-                    fill: isClickable(geo) ? '#a7f3d0' : 'rgba(229, 231, 235, 0.6)',
-                    outline: 'none',
-                    cursor: isClickable(geo) ? 'pointer' : 'default'
-                  },
-                  pressed: { outline: 'none' },
-                }}
-              />
-            ))
+            geographies.map((geo) => {
+              const name = geo.properties.name
+              const code = geoNameToCode[name]
+              const clickable = code && availableCountryCodes.has(code)
+              const isSelected = code && selectedCountry === code
+
+              return (
+                <Geography
+                  key={geo.rsmKey}
+                  geography={geo}
+                  fill={getCountryFill(geo)}
+                  stroke="#90a4b8"
+                  strokeWidth={0.5}
+                  onClick={() => handleGeoClick(geo)}
+                  onMouseEnter={() => {
+                    setHoveredCountry(getHoverLabel(geo))
+                    setHoveredCountryCode(code || null)
+                  }}
+                  onMouseLeave={() => {
+                    setHoveredCountry(null)
+                    setHoveredCountryCode(null)
+                  }}
+                  onMouseMove={(event) => {
+                    setCursorPos({ x: event.clientX, y: event.clientY })
+                  }}
+                  className={clickable ? 'clickable' : ''}
+                  style={{
+                    default: { outline: 'none' },
+                    hover: {
+                      fill: clickable
+                        ? (isSelected ? "#059669" : "#a7f3d0")
+                        : 'rgba(229, 231, 235, 0.6)',
+                      outline: 'none',
+                      cursor: clickable ? 'pointer' : 'default'
+                    },
+                    pressed: { outline: 'none' },
+                  }}
+                />
+              )
+            })
           }
         </Geographies>
 
