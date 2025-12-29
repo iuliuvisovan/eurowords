@@ -37,6 +37,8 @@ const getFlagEmoji = (code) => {
 
 function App() {
   const [selectedCountry, setSelectedCountry] = useState(null)
+  const [hoveredCountry, setHoveredCountry] = useState(null)
+  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 })
   const selectedCountryName = selectedCountry
     ? europeanCountries[selectedCountry]?.name
     : null
@@ -83,6 +85,17 @@ function App() {
           ? `${selectedCountryFlag} What "${selectedCountryName}" is called in different European languages`
           : "Click on a country"}
       </div>
+      {hoveredCountry && (
+        <div
+          className="hover-tooltip"
+          style={{
+            left: cursorPos.x + 12,
+            top: cursorPos.y + 12,
+          }}
+        >
+          {hoveredCountry}
+        </div>
+      )}
 
       <ComposableMap
         projection="geoMercator"
@@ -102,6 +115,11 @@ function App() {
                 stroke="#90a4b8"
                 strokeWidth={0.5}
                 onClick={() => handleGeoClick(geo)}
+                onMouseEnter={() => setHoveredCountry(geo.properties.name)}
+                onMouseLeave={() => setHoveredCountry(null)}
+                onMouseMove={(event) => {
+                  setCursorPos({ x: event.clientX, y: event.clientY })
+                }}
                 className={isClickable(geo) ? 'clickable' : ''}
                 style={{
                   default: { outline: 'none' },
@@ -112,9 +130,7 @@ function App() {
                   },
                   pressed: { outline: 'none' },
                 }}
-              >
-                <title>{geo.properties.name}</title>
-              </Geography>
+              />
             ))
           }
         </Geographies>

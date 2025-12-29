@@ -35,6 +35,20 @@
   height: 100%;
 }
 
+.hover-tooltip {
+  position: fixed;
+  z-index: 200;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #0b3556;
+  font-size: 0.9rem;
+  font-weight: 600;
+  pointer-events: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  white-space: nowrap;
+}
+
 .clickable {
   cursor: pointer;
   transition: fill 0.2s ease;
