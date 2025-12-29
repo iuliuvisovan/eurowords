@@ -41,7 +41,7 @@ export const europeanCountries = {
   NO: { name: "Norway", sizeFactor: 6, coordinates: [8.5, 62.0] },
   DK: { name: "Denmark", sizeFactor: 3, coordinates: [9.5, 56.0] },
   IE: { name: "Ireland", sizeFactor: 4, coordinates: [-8.0, 53.4] },
-  GB: { name: "United Kingdom", sizeFactor: 6, coordinates: [-2.0, 54.0] },
+  GB: { name: "United Kingdom", sizeFactor: 10, coordinates: [-2.0, 54.0] },
   IS: { name: "Iceland", sizeFactor: 5, coordinates: [-19.0, 65.0] },
   RU: { name: "Russia", sizeFactor: 10, coordinates: [40.0, 56.0] },
   TR: { name: "Turkey", sizeFactor: 9, coordinates: [35.0, 39.0] },

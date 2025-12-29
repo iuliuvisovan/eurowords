@@ -276,7 +276,7 @@ function App() {
           ]
           const labelDx = labelOffsets[code]?.dx || 0
           const sizeFactor = data.sizeFactor || 5
-          const fontSize = 7 + sizeFactor * 0.6 + (isSelected ? 2 : 0)
+          const fontSize = (8 + sizeFactor * 0.9 + (isSelected ? 3 : 0)) * 0.85
           return (
             <Marker key={code} coordinates={labelCoords}>
               <text
