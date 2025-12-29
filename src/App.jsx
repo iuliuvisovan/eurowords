@@ -49,7 +49,7 @@ function App() {
 
     // Highlight clickable countries
     if (code && availableCountryCodes.has(code)) {
-      return selectedCountry === code ? "#2563eb" : "#93c5fd"
+      return selectedCountry === code ? "#2563eb" : "#ffffff"
     }
 
     return "#ffffff"
@@ -65,7 +65,7 @@ function App() {
     <div className="app">
       <div className="floating-hint">
         {selectedCountryName
-          ? `"${selectedCountryName}" in all of Europe's languages`
+          ? `What "${selectedCountryName}" is in all of Europe's languages`
           : "Click on a country"}
       </div>
 
@@ -84,7 +84,7 @@ function App() {
                 key={geo.rsmKey}
                 geography={geo}
                 fill={getCountryFill(geo)}
-                stroke="#fff"
+                stroke="#90a4b8"
                 strokeWidth={0.5}
                 onClick={() => handleGeoClick(geo)}
                 className={isClickable(geo) ? 'clickable' : ''}

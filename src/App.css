@@ -18,6 +18,8 @@
   letter-spacing: 0.02em;
   color: #0b3556;
   text-transform: none;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
 }
 
 @keyframes pulse {
