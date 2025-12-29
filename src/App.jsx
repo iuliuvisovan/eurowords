@@ -169,6 +169,14 @@ function App() {
     return toRgba(hex, alpha)
   }
 
+  const getBaseLabelSize = (name) => {
+    if (!name) return 8
+    if (name.length >= 22) return 6
+    if (name.length >= 18) return 6.5
+    if (name.length >= 14) return 7
+    return 8
+  }
+
   return (
     <div className="app">
       <div className="floating-hint">
@@ -269,20 +277,24 @@ function App() {
             FI: { lat: -3, dx: 0 },
             EE: { lat: 0, dx: 10 },
             LV: { lat: 0, dx: 0 },
+            FR: { lat: 0, dx: 0, dy: 10 },
           }
           const labelCoords = [
             data.coordinates[0],
             data.coordinates[1] + (labelOffsets[code]?.lat || 0),
           ]
           const labelDx = labelOffsets[code]?.dx || 0
+          const labelDy = labelOffsets[code]?.dy || 0
           const sizeFactor = data.sizeFactor || 5
-          const fontSize = (8 + sizeFactor * 0.9 + (isSelected ? 3 : 0)) * 0.85
+          const baseLabelSize = getBaseLabelSize(selectedCountryName)
+          const fontSize = (baseLabelSize + sizeFactor * 0.9 + (isSelected ? 3 : 0)) * 0.85
           return (
             <Marker key={code} coordinates={labelCoords}>
               <text
                 textAnchor="middle"
                 className={`country-label ${isSelected ? 'selected' : ''}`}
                 dx={labelDx}
+                dy={labelDy}
                 style={{ fontSize: `${fontSize}px` }}
               >
                 <tspan className="label-flag">
