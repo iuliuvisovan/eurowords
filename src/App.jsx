@@ -91,6 +91,7 @@ const getFlagEmoji = (code) => {
 function App() {
   const [selectedCountry, setSelectedCountry] = useState(null)
   const [hoveredCountry, setHoveredCountry] = useState(null)
+  const [hoveredCountryCode, setHoveredCountryCode] = useState(null)
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 })
   const selectedCountryName = selectedCountry
     ? europeanCountries[selectedCountry]?.name
@@ -175,8 +176,15 @@ function App() {
                 stroke="#90a4b8"
                 strokeWidth={0.5}
                 onClick={() => handleGeoClick(geo)}
-                onMouseEnter={() => setHoveredCountry(getHoverLabel(geo))}
-                onMouseLeave={() => setHoveredCountry(null)}
+                onMouseEnter={() => {
+                  const code = geoNameToCode[geo.properties.name] || null
+                  setHoveredCountry(getHoverLabel(geo))
+                  setHoveredCountryCode(code)
+                }}
+                onMouseLeave={() => {
+                  setHoveredCountry(null)
+                  setHoveredCountryCode(null)
+                }}
                 onMouseMove={(event) => {
                   setCursorPos({ x: event.clientX, y: event.clientY })
                 }}
@@ -213,6 +221,15 @@ function App() {
             </Marker>
           )
         })}
+        {hoveredCountryCode && europeanCountries[hoveredCountryCode] && (
+          <Marker
+            coordinates={europeanCountries[hoveredCountryCode].coordinates}
+          >
+            <text textAnchor="middle" className="hover-flag">
+              {getFlagEmoji(hoveredCountryCode)}
+            </text>
+          </Marker>
+        )}
       </ComposableMap>
     </div>
   )
