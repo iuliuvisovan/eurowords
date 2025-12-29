@@ -161,8 +161,8 @@ function App() {
       <ComposableMap
         projection="geoMercator"
         projectionConfig={{
-          center: [15, 52.5],
-          scale: 600,
+          center: [15, 50],
+          scale: 800,
         }}
         className="map"
       >
@@ -192,7 +192,7 @@ function App() {
                 style={{
                   default: { outline: 'none' },
                   hover: {
-                    fill: isClickable(geo) ? '#bfe3ff' : '#e5e7eb',
+                    fill: isClickable(geo) ? '#d7efff' : '#e5e7eb',
                     outline: 'none',
                     cursor: isClickable(geo) ? 'pointer' : 'default'
                   },
