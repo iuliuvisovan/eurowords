@@ -25,6 +25,9 @@ const availableCountryCodes = new Set(Object.keys(countryTranslations))
 
 function App() {
   const [selectedCountry, setSelectedCountry] = useState(null)
+  const selectedCountryName = selectedCountry
+    ? europeanCountries[selectedCountry]?.name
+    : null
 
   const translations = useMemo(() => {
     if (!selectedCountry) return {}
@@ -49,7 +52,7 @@ function App() {
       return selectedCountry === code ? "#2563eb" : "#93c5fd"
     }
 
-    return "#e5e7eb"
+    return "#ffffff"
   }
 
   const isClickable = (geo) => {
@@ -60,11 +63,11 @@ function App() {
 
   return (
     <div className="app">
-      {!selectedCountry && (
-        <div className="floating-hint">
-          Click on a country
-        </div>
-      )}
+      <div className="floating-hint">
+        {selectedCountryName
+          ? `"${selectedCountryName}" in all of Europe's languages`
+          : "Click on a country"}
+      </div>
 
       <ComposableMap
         projection="geoMercator"
@@ -88,7 +91,7 @@ function App() {
                 style={{
                   default: { outline: 'none' },
                   hover: {
-                    fill: isClickable(geo) ? '#3b82f6' : '#e5e7eb',
+                    fill: isClickable(geo) ? '#bfe3ff' : '#ffffff',
                     outline: 'none',
                     cursor: isClickable(geo) ? 'pointer' : 'default'
                   },
