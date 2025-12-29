@@ -120,7 +120,7 @@ function App() {
 
     // Highlight clickable countries
     if (code && availableCountryCodes.has(code)) {
-      return selectedCountry === code ? "#2563eb" : "#ffffff"
+      return selectedCountry === code ? "#059669" : "#ffffff"
     }
 
     return "rgba(255, 255, 255, 0.2)"
@@ -192,7 +192,7 @@ function App() {
                 style={{
                   default: { outline: 'none' },
                   hover: {
-                    fill: isClickable(geo) ? '#d7efff' : 'rgba(229, 231, 235, 0.6)',
+                    fill: isClickable(geo) ? '#a7f3d0' : 'rgba(229, 231, 235, 0.6)',
                     outline: 'none',
                     cursor: isClickable(geo) ? 'pointer' : 'default'
                   },
