@@ -10,14 +10,10 @@ import './App.css'
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"
 
-// Map geo names to our country codes
-const geoNameToCode = {
-  "Germany": "DE",
-  "Romania": "ROU",
-}
-
-// Countries that have translations available
-const availableCountryCodes = ['DE', 'RO']
+const geoNameToCode = Object.fromEntries(
+  Object.entries(europeanCountries).map(([code, data]) => [data.name, code])
+)
+const availableCountryCodes = new Set(Object.keys(countryTranslations))
 
 function App() {
   const [selectedCountry, setSelectedCountry] = useState(null)
@@ -29,25 +25,20 @@ function App() {
 
   const handleGeoClick = (geo) => {
     const name = geo.properties.name
-    let code = null
+    const code = geoNameToCode[name]
 
-    if (name === "Germany") code = "DE"
-    if (name === "Romania") code = "RO"
-
-    if (code) {
+    if (code && availableCountryCodes.has(code)) {
       setSelectedCountry(selectedCountry === code ? null : code)
     }
   }
 
   const getCountryFill = (geo) => {
     const name = geo.properties.name
+    const code = geoNameToCode[name]
 
     // Highlight clickable countries
-    if (name === "Germany") {
-      return selectedCountry === "DE" ? "#2563eb" : "#93c5fd"
-    }
-    if (name === "Romania") {
-      return selectedCountry === "RO" ? "#2563eb" : "#93c5fd"
+    if (code && availableCountryCodes.has(code)) {
+      return selectedCountry === code ? "#2563eb" : "#93c5fd"
     }
 
     return "#e5e7eb"
@@ -55,7 +46,8 @@ function App() {
 
   const isClickable = (geo) => {
     const name = geo.properties.name
-    return name === "Germany" || name === "Romania"
+    const code = geoNameToCode[name]
+    return code && availableCountryCodes.has(code)
   }
 
   return (
