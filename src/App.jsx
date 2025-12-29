@@ -216,7 +216,7 @@ function App() {
                 textAnchor="middle"
                 className={`country-label ${isSelected ? 'selected' : ''}`}
               >
-                {translation}
+                {`${selectedCountryFlag} ${translation}`}
               </text>
             </Marker>
           )
