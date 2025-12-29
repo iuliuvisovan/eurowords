@@ -31,7 +31,7 @@ const groupBaseColors = {
   1: "#00ff88",
   2: "#00ffff",
   3: "#0057ff",
-  4: "#7a00ff",
+  4: "#c084fc",
   5: "#00b7ff",
   6: "#ffae00",
   7: "#ff5a00",
@@ -172,9 +172,15 @@ function App() {
   return (
     <div className="app">
       <div className="floating-hint">
-        {selectedCountryName
-          ? `${selectedCountryFlag} What "${selectedCountryName}" is called in different European languages`
-          : "Click on a country"}
+        {selectedCountryName ? (
+          <>
+            {selectedCountryFlag} What "
+            <span className="title-country">{selectedCountryName}</span>
+            " is called in different European languages
+          </>
+        ) : (
+          "Click on a country"
+        )}
       </div>
       {hoveredCountry && (
         <div
