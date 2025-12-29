@@ -221,6 +221,8 @@ function App() {
             NO: { lat: -3, dx: 0 },
             SE: { lat: -3, dx: -50 },
             FI: { lat: -3, dx: 0 },
+            EE: { lat: 0, dx: 10 },
+            LV: { lat: 0, dx: 0 },
           }
           const labelCoords = [
             data.coordinates[0],
