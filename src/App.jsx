@@ -87,8 +87,8 @@ function App() {
       <ComposableMap
         projection="geoMercator"
         projectionConfig={{
-          center: [15, 52],
-          scale: 700,
+          center: [15, 52.5],
+          scale: 600,
         }}
         className="map"
       >
