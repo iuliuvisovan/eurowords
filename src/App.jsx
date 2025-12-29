@@ -23,11 +23,26 @@ const geoNameToCode = {
 }
 const availableCountryCodes = new Set(Object.keys(countryTranslations))
 
+const flagOverrides = {
+  XK: "🇽🇰",
+}
+
+const getFlagEmoji = (code) => {
+  if (!code) return ""
+  if (flagOverrides[code]) return flagOverrides[code]
+  return code
+    .toUpperCase()
+    .replace(/./g, (char) => String.fromCodePoint(0x1f1e6 + char.charCodeAt(0) - 65))
+}
+
 function App() {
   const [selectedCountry, setSelectedCountry] = useState(null)
   const selectedCountryName = selectedCountry
     ? europeanCountries[selectedCountry]?.name
     : null
+  const selectedCountryFlag = selectedCountry
+    ? getFlagEmoji(selectedCountry)
+    : ""
 
   const translations = useMemo(() => {
     if (!selectedCountry) return {}
@@ -65,7 +80,7 @@ function App() {
     <div className="app">
       <div className="floating-hint">
         {selectedCountryName
-          ? `What "${selectedCountryName}" is in all of Europe's languages`
+          ? `${selectedCountryFlag} What "${selectedCountryName}" is called in different European languages`
           : "Click on a country"}
       </div>
 
