@@ -123,7 +123,7 @@ function App() {
       return selectedCountry === code ? "#2563eb" : "#ffffff"
     }
 
-    return "#e5e7eb"
+    return "rgba(255, 255, 255, 0.2)"
   }
 
   const isClickable = (geo) => {
@@ -192,7 +192,7 @@ function App() {
                 style={{
                   default: { outline: 'none' },
                   hover: {
-                    fill: isClickable(geo) ? '#d7efff' : '#e5e7eb',
+                    fill: isClickable(geo) ? '#d7efff' : 'rgba(229, 231, 235, 0.6)',
                     outline: 'none',
                     cursor: isClickable(geo) ? 'pointer' : 'default'
                   },
