@@ -278,6 +278,11 @@ function App() {
             EE: { lat: 0, dx: 10 },
             LV: { lat: 0, dx: 0 },
             FR: { lat: 0, dx: 0, dy: 10 },
+            BA: { lat: 0, dx: 0, dy: -11 },
+            AL: { lat: 0, dx: 0, dy: 10 },
+            ME: { lat: 0, dx: 0, dy: -5 },
+            XK: { lat: 0, dx: 0, dy: 2 },
+            BG: { lat: 0, dx: 5, dy: -3 },
           }
           const labelCoords = [
             data.coordinates[0],
