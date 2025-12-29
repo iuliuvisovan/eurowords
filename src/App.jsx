@@ -223,7 +223,10 @@ function App() {
         })}
         {hoveredCountryCode && europeanCountries[hoveredCountryCode] && (
           <Marker
-            coordinates={europeanCountries[hoveredCountryCode].coordinates}
+            coordinates={[
+              europeanCountries[hoveredCountryCode].coordinates[0],
+              europeanCountries[hoveredCountryCode].coordinates[1] - 1.2,
+            ]}
           >
             <text textAnchor="middle" className="hover-flag">
               {getFlagEmoji(hoveredCountryCode)}
