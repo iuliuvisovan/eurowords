@@ -27,6 +27,17 @@ const flagOverrides = {
   XK: "🇽🇰",
 }
 
+const groupBaseColors = {
+  1: "#00ff88",
+  2: "#00ffff",
+  3: "#0057ff",
+  4: "#7a00ff",
+  5: "#00b7ff",
+  6: "#ffae00",
+  7: "#ff5a00",
+  0: "#00c26a",
+}
+
 const countryLanguages = {
   PT: "Portuguese",
   ES: "Spanish",
@@ -120,10 +131,16 @@ function App() {
 
     // Highlight clickable countries
     if (code && availableCountryCodes.has(code)) {
-      return selectedCountry === code ? "#059669" : "#ffffff"
+      if (selectedCountry) {
+        if (code === selectedCountry) return getGroupColor(1, 0.9)
+        const translationEntry = translations[code]
+        const groupNumber = translationEntry ? translationEntry.groupNumber : 0
+        return getGroupColor(groupNumber, 0.75)
+      }
+      return "#ffffff"
     }
 
-    return "rgba(255, 255, 255, 0.2)"
+    return "rgba(229, 231, 235, 0.6)"
   }
 
   const isClickable = (geo) => {
@@ -137,6 +154,19 @@ function App() {
     const code = geoNameToCode[name]
     const language = code ? countryLanguages[code] : null
     return language ? `${name} - ${language}` : name
+  }
+
+  const toRgba = (hex, alpha) => {
+    const value = hex.replace("#", "")
+    const r = parseInt(value.slice(0, 2), 16)
+    const g = parseInt(value.slice(2, 4), 16)
+    const b = parseInt(value.slice(4, 6), 16)
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`
+  }
+
+  const getGroupColor = (groupNumber, alpha) => {
+    const hex = groupBaseColors[groupNumber] || groupBaseColors[0]
+    return toRgba(hex, alpha)
   }
 
   return (
@@ -173,13 +203,24 @@ function App() {
               const code = geoNameToCode[name]
               const clickable = code && availableCountryCodes.has(code)
               const isSelected = code && selectedCountry === code
+              const hoverFill = clickable
+                ? (selectedCountry
+                  ? (code === selectedCountry
+                    ? getGroupColor(1, 1)
+                    : (() => {
+                      const translationEntry = translations[code]
+                      const groupNumber = translationEntry ? translationEntry.groupNumber : 0
+                      return getGroupColor(groupNumber, 1)
+                    })())
+                  : (isSelected ? getGroupColor(1, 1) : "rgba(167, 243, 208, 0.9)"))
+                : "rgba(229, 231, 235, 0.6)"
 
               return (
                 <Geography
                   key={geo.rsmKey}
                   geography={geo}
                   fill={getCountryFill(geo)}
-                  stroke="#90a4b8"
+                  stroke="#1f2937"
                   strokeWidth={0.5}
                   onClick={() => handleGeoClick(geo)}
                   onMouseEnter={() => {
@@ -197,9 +238,7 @@ function App() {
                   style={{
                     default: { outline: 'none' },
                     hover: {
-                      fill: clickable
-                        ? (isSelected ? "#059669" : "#a7f3d0")
-                        : 'rgba(229, 231, 235, 0.6)',
+                      fill: hoverFill,
                       outline: 'none',
                       cursor: clickable ? 'pointer' : 'default'
                     },
@@ -237,7 +276,10 @@ function App() {
                 className={`country-label ${isSelected ? 'selected' : ''}`}
                 dx={labelDx}
               >
-                {`${getFlagEmoji(code)} ${translation}`}
+                <tspan className="label-flag">
+                  {getFlagEmoji(code)}
+                </tspan>
+                <tspan> {translation}</tspan>
               </text>
             </Marker>
           )
