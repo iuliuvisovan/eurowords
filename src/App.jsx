@@ -213,8 +213,9 @@ function App() {
 
         {/* Render country name labels */}
         {selectedCountry && Object.entries(europeanCountries).map(([code, data]) => {
-          const translation = translations[code]
-          if (!translation) return null
+          const translationEntry = translations[code]
+          if (!translationEntry) return null
+          const translation = translationEntry.value
 
           const isSelected = code === selectedCountry
           const labelOffsets = {
