@@ -164,8 +164,40 @@ function App() {
     return `rgba(${r}, ${g}, ${b}, ${alpha})`
   }
 
+  const groupColorMap = useMemo(() => {
+    if (!selectedCountry) return {}
+    const groups = Array.from(
+      new Set(
+        Object.values(translations)
+          .map((entry) => entry.groupNumber)
+          .filter((group) => group > 0)
+      )
+    )
+    if (groups.length === 0) return {}
+
+    const map = {}
+    const ordered = groups.includes(1)
+      ? [1, ...groups.filter((group) => group !== 1).sort((a, b) => a - b)]
+      : groups.sort((a, b) => a - b)
+
+    if (ordered.length === 2) {
+      map[ordered[0]] = "#00ff88"
+      map[ordered[1]] = "#ff7a00"
+      return map
+    }
+
+    if (ordered.length === 3) {
+      map[ordered[0]] = "#00ff88"
+      map[ordered[1]] = "#ff7a00"
+      map[ordered[2]] = "hsl(210 100% 50%)"
+      return map
+    }
+
+    return map
+  }, [selectedCountry, translations])
+
   const getGroupColor = (groupNumber, alpha) => {
-    const hex = groupBaseColors[groupNumber] || groupBaseColors[0]
+    const hex = groupColorMap[groupNumber] || groupBaseColors[groupNumber] || groupBaseColors[0]
     return toRgba(hex, alpha)
   }
 
