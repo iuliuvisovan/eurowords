@@ -101,6 +101,9 @@ export const countryTranslations = {
     MT: { value: "Il-Ġermanja", groupNumber: 3 },
     LU: { value: "Däitschland", groupNumber: 1 },
     XK: { value: "Gjermania", groupNumber: 3 },
+    GE: { value: "გერმანია", groupNumber: 3 },
+    AM: { value: "Գերdelays", groupNumber: 3 },
+    AZ: { value: "Almaniya", groupNumber: 2 },
   },
   RO: { // Romania in different languages
     PT: { value: "Roménia", groupNumber: 0 },
@@ -145,6 +148,9 @@ export const countryTranslations = {
     MT: { value: "Ir-Rumanija", groupNumber: 0 },
     LU: { value: "Rumänien", groupNumber: 0 },
     XK: { value: "Rumania", groupNumber: 0 },
+    GE: { value: "რუმინეთი", groupNumber: 0 },
+    AM: { value: "Delays", groupNumber: 0 },
+    AZ: { value: "Rumıniya", groupNumber: 0 },
   },
   GB: { // United Kingdom in different languages
     PT: { value: "Reino Unido", groupNumber: 1 },
@@ -189,6 +195,9 @@ export const countryTranslations = {
     MT: { value: "Ir-Renju Unit", groupNumber: 1 },
     LU: { value: "Vereenegt Kinnekräich", groupNumber: 1 },
     XK: { value: "Mbretëria e Bashkuar", groupNumber: 1 },
+    GE: { value: "გაერთიანებული სამეფო", groupNumber: 0 },
+    AM: { value: "Միdelays Delays", groupNumber: 0 },
+    AZ: { value: "Birləşmiş Krallıq", groupNumber: 0 },
   },
   FR: { // France in different languages
     PT: { value: "França", groupNumber: 1 },
@@ -233,6 +242,9 @@ export const countryTranslations = {
     MT: { value: "Franza", groupNumber: 1 },
     LU: { value: "Frankräich", groupNumber: 1 },
     XK: { value: "Franca", groupNumber: 1 },
+    GE: { value: "საფრანგეთი", groupNumber: 0 },
+    AM: { value: "Delays", groupNumber: 0 },
+    AZ: { value: "Fransa", groupNumber: 0 },
   },
   ES: { // Spain in different languages
     PT: { value: "Espanha", groupNumber: 1 },
@@ -277,6 +289,9 @@ export const countryTranslations = {
     MT: { value: "Spanja", groupNumber: 1 },
     LU: { value: "Spuenien", groupNumber: 1 },
     XK: { value: "Spanja", groupNumber: 1 },
+    GE: { value: "ესპანეთი", groupNumber: 0 },
+    AM: { value: "Իspaniya", groupNumber: 0 },
+    AZ: { value: "İspaniya", groupNumber: 0 },
   },
   IT: { // Italy in different languages
     PT: { value: "Itália", groupNumber: 0 },
@@ -321,6 +336,9 @@ export const countryTranslations = {
     MT: { value: "Italja", groupNumber: 0 },
     LU: { value: "Italien", groupNumber: 0 },
     XK: { value: "Italia", groupNumber: 0 },
+    GE: { value: "იტალია", groupNumber: 0 },
+    AM: { value: "Իdelay", groupNumber: 0 },
+    AZ: { value: "İtaliya", groupNumber: 0 },
   },
   GR: { // Greece in different languages
     PT: { value: "Grécia", groupNumber: 0 },
@@ -365,6 +383,9 @@ export const countryTranslations = {
     MT: { value: "Greċja", groupNumber: 0 },
     LU: { value: "Griicheland", groupNumber: 0 },
     XK: { value: "Greqia", groupNumber: 0 },
+    GE: { value: "საბერძნეთი", groupNumber: 0 },
+    AM: { value: "Delays", groupNumber: 0 },
+    AZ: { value: "Yunanıstan", groupNumber: 0 },
   },
   PL: { // Poland in different languages
     PT: { value: "Polónia", groupNumber: 0 },
@@ -409,6 +430,9 @@ export const countryTranslations = {
     MT: { value: "Polonja", groupNumber: 0 },
     LU: { value: "Polen", groupNumber: 0 },
     XK: { value: "Polonia", groupNumber: 0 },
+    GE: { value: "პოლონეთი", groupNumber: 0 },
+    AM: { value: "Lehastan", groupNumber: 0 },
+    AZ: { value: "Polşa", groupNumber: 0 },
   },
   NL: { // Netherlands in different languages
     PT: { value: "Países Baixos", groupNumber: 0 },
@@ -453,6 +477,9 @@ export const countryTranslations = {
     MT: { value: "Pajjiżi l-Baxxi", groupNumber: 0 },
     LU: { value: "Holland", groupNumber: 0 },
     XK: { value: "Holanda", groupNumber: 0 },
+    GE: { value: "ნიდერლანდები", groupNumber: 0 },
+    AM: { value: "Delays", groupNumber: 0 },
+    AZ: { value: "Niderland", groupNumber: 0 },
   },
   IE: { // Ireland in different languages
     PT: { value: "Irlanda", groupNumber: 0 },
@@ -497,6 +524,9 @@ export const countryTranslations = {
     MT: { value: "Irlanda", groupNumber: 0 },
     LU: { value: "Irland", groupNumber: 0 },
     XK: { value: "Irlanda", groupNumber: 0 },
+    GE: { value: "ირლანდია", groupNumber: 0 },
+    AM: { value: "Իrlandiya", groupNumber: 0 },
+    AZ: { value: "İrlandiya", groupNumber: 0 },
   },
   BE: { // Belgium in different languages
     PT: { value: "Bélgica", groupNumber: 0 },
@@ -541,6 +571,9 @@ export const countryTranslations = {
     MT: { value: "Belġju", groupNumber: 0 },
     LU: { value: "Belsch", groupNumber: 0 },
     XK: { value: "Belgjika", groupNumber: 0 },
+    GE: { value: "ბელგია", groupNumber: 0 },
+    AM: { value: "delays", groupNumber: 0 },
+    AZ: { value: "Belçika", groupNumber: 0 },
   },
   LU: { // Luxembourg in different languages
     PT: { value: "Luxemburgo", groupNumber: 0 },
@@ -585,6 +618,9 @@ export const countryTranslations = {
     MT: { value: "Lussemburgu", groupNumber: 0 },
     LU: { value: "Lëtzebuerg", groupNumber: 0 },
     XK: { value: "Luksemburgu", groupNumber: 0 },
+    GE: { value: "ლუქსემბურგი", groupNumber: 0 },
+    AM: { value: "Lyuksemburg", groupNumber: 0 },
+    AZ: { value: "Lüksemburq", groupNumber: 0 },
   },
   TR: { // Turkey in different languages
     PT: { value: "Turquia", groupNumber: 0 },
@@ -629,6 +665,9 @@ export const countryTranslations = {
     MT: { value: "Turkija", groupNumber: 0 },
     LU: { value: "Tierkei", groupNumber: 0 },
     XK: { value: "Turqia", groupNumber: 0 },
+    GE: { value: "თურქეთი", groupNumber: 0 },
+    AM: { value: "Delays", groupNumber: 0 },
+    AZ: { value: "Türkiyə", groupNumber: 0 },
   },
   CY: { // Cyprus in different languages
     PT: { value: "Chipre", groupNumber: 0 },
@@ -673,6 +712,9 @@ export const countryTranslations = {
     MT: { value: "Ċipru", groupNumber: 0 },
     LU: { value: "Zypern", groupNumber: 0 },
     XK: { value: "Qipro", groupNumber: 0 },
+    GE: { value: "კვიპროსი", groupNumber: 0 },
+    AM: { value: "Կipros", groupNumber: 0 },
+    AZ: { value: "Kipr", groupNumber: 0 },
   },
   RU: { // Russia in different languages
     PT: { value: "Rússia", groupNumber: 0 },
@@ -717,6 +759,9 @@ export const countryTranslations = {
     MT: { value: "Russja", groupNumber: 0 },
     LU: { value: "Russland", groupNumber: 0 },
     XK: { value: "Rusia", groupNumber: 0 },
+    GE: { value: "რუსეთი", groupNumber: 0 },
+    AM: { value: "Delays", groupNumber: 0 },
+    AZ: { value: "Rusiya", groupNumber: 0 },
   },
   UA: { // Ukraine in different languages
     PT: { value: "Ucrânia", groupNumber: 0 },
@@ -761,6 +806,9 @@ export const countryTranslations = {
     MT: { value: "Ukrajna", groupNumber: 0 },
     LU: { value: "Ukrain", groupNumber: 0 },
     XK: { value: "Ukraina", groupNumber: 0 },
+    GE: { value: "უკრაინა", groupNumber: 0 },
+    AM: { value: "Ուkraina", groupNumber: 0 },
+    AZ: { value: "Ukrayna", groupNumber: 0 },
   },
   CZ: { // Czechia in different languages
     PT: { value: "Chéquia", groupNumber: 0 },
@@ -805,6 +853,9 @@ export const countryTranslations = {
     MT: { value: "Iċ-Ċekja", groupNumber: 0 },
     LU: { value: "Tschechien", groupNumber: 0 },
     XK: { value: "Çekia", groupNumber: 0 },
+    GE: { value: "ჩეხეთი", groupNumber: 0 },
+    AM: { value: "Չexiya", groupNumber: 0 },
+    AZ: { value: "Çexiya", groupNumber: 0 },
   },
   HU: { // Hungary in different languages
     PT: { value: "Hungria", groupNumber: 0 },
@@ -849,6 +900,9 @@ export const countryTranslations = {
     MT: { value: "Ungerija", groupNumber: 0 },
     LU: { value: "Ungarn", groupNumber: 0 },
     XK: { value: "Hungaria", groupNumber: 0 },
+    GE: { value: "უნგრეთი", groupNumber: 0 },
+    AM: { value: "Delays", groupNumber: 0 },
+    AZ: { value: "Macarıstan", groupNumber: 0 },
   },
   SK: { // Slovakia in different languages
     PT: { value: "Eslováquia", groupNumber: 0 },
@@ -893,6 +947,9 @@ export const countryTranslations = {
     MT: { value: "Slovakkja", groupNumber: 0 },
     LU: { value: "Slowakei", groupNumber: 0 },
     XK: { value: "Sllovakia", groupNumber: 0 },
+    GE: { value: "სლოვაკეთი", groupNumber: 0 },
+    AM: { value: "Slovakiya", groupNumber: 0 },
+    AZ: { value: "Slovakiya", groupNumber: 0 },
   },
   SI: { // Slovenia in different languages
     PT: { value: "Eslovénia", groupNumber: 0 },
@@ -937,6 +994,9 @@ export const countryTranslations = {
     MT: { value: "Slovenja", groupNumber: 0 },
     LU: { value: "Slowenien", groupNumber: 0 },
     XK: { value: "Sllovenia", groupNumber: 0 },
+    GE: { value: "სლოვენია", groupNumber: 0 },
+    AM: { value: "Sloveniya", groupNumber: 0 },
+    AZ: { value: "Sloveniya", groupNumber: 0 },
   },
   HR: { // Croatia in different languages
     PT: { value: "Croácia", groupNumber: 0 },
@@ -981,6 +1041,9 @@ export const countryTranslations = {
     MT: { value: "Kroazja", groupNumber: 0 },
     LU: { value: "Kroatien", groupNumber: 0 },
     XK: { value: "Kroacia", groupNumber: 0 },
+    GE: { value: "ხორვატია", groupNumber: 0 },
+    AM: { value: "Xorvatiya", groupNumber: 0 },
+    AZ: { value: "Xorvatiya", groupNumber: 0 },
   },
   AL: { // Albania in different languages
     PT: { value: "Albânia", groupNumber: 0 },
@@ -1025,6 +1088,9 @@ export const countryTranslations = {
     MT: { value: "Albanija", groupNumber: 0 },
     LU: { value: "Albanien", groupNumber: 0 },
     XK: { value: "Shqipëria", groupNumber: 0 },
+    GE: { value: "ალბანეთი", groupNumber: 0 },
+    AM: { value: "Delays", groupNumber: 0 },
+    AZ: { value: "Albaniya", groupNumber: 0 },
   },
   AT: { // Austria in different languages
     PT: { value: "Áustria", groupNumber: 0 },
@@ -1069,6 +1135,9 @@ export const countryTranslations = {
     MT: { value: "Awstrija", groupNumber: 0 },
     LU: { value: "Éisträich", groupNumber: 0 },
     XK: { value: "Austri", groupNumber: 0 },
+    GE: { value: "ავსტრია", groupNumber: 0 },
+    AM: { value: "Delays", groupNumber: 0 },
+    AZ: { value: "Avstriya", groupNumber: 0 },
   },
   BG: { // Bulgaria in different languages
     PT: { value: "Bulgária", groupNumber: 0 },
@@ -1113,6 +1182,9 @@ export const countryTranslations = {
     MT: { value: "Bulgarija", groupNumber: 0 },
     LU: { value: "Bulgarien", groupNumber: 0 },
     XK: { value: "Bullgaria", groupNumber: 0 },
+    GE: { value: "ბულგარეთი", groupNumber: 0 },
+    AM: { value: "delays", groupNumber: 0 },
+    AZ: { value: "Bolqarıstan", groupNumber: 0 },
   },
   RS: { // Serbia in different languages
     PT: { value: "Sérvia", groupNumber: 0 },
@@ -1157,6 +1229,9 @@ export const countryTranslations = {
     MT: { value: "Serbja", groupNumber: 0 },
     LU: { value: "Serbien", groupNumber: 0 },
     XK: { value: "Serbia", groupNumber: 0 },
+    GE: { value: "სერბეთი", groupNumber: 0 },
+    AM: { value: "Serbiya", groupNumber: 0 },
+    AZ: { value: "Serbiya", groupNumber: 0 },
   },
   BA: { // Bosnia and Herzegovina in different languages
     PT: { value: "Bósnia e Herzegovina", groupNumber: 0 },
@@ -1201,6 +1276,9 @@ export const countryTranslations = {
     MT: { value: "Bosnja u Ħerzegovina", groupNumber: 0 },
     LU: { value: "Bosnien an Herzegowina", groupNumber: 0 },
     XK: { value: "Bosnja dhe Hercegovina", groupNumber: 0 },
+    GE: { value: "ბოსნია და ჰერცეგოვინა", groupNumber: 0 },
+    AM: { value: "delays", groupNumber: 0 },
+    AZ: { value: "Bosniya və Herseqovina", groupNumber: 0 },
   },
   EE: { // Estonia in different languages
     PT: { value: "Estónia", groupNumber: 0 },
@@ -1245,6 +1323,9 @@ export const countryTranslations = {
     MT: { value: "Estonja", groupNumber: 0 },
     LU: { value: "Estland", groupNumber: 0 },
     XK: { value: "Estonia", groupNumber: 0 },
+    GE: { value: "ესტონეთი", groupNumber: 0 },
+    AM: { value: "Estoniya", groupNumber: 0 },
+    AZ: { value: "Estoniya", groupNumber: 0 },
   },
   LV: { // Latvia in different languages
     PT: { value: "Letónia", groupNumber: 0 },
@@ -1289,6 +1370,9 @@ export const countryTranslations = {
     MT: { value: "Latvja", groupNumber: 0 },
     LU: { value: "Lettland", groupNumber: 0 },
     XK: { value: "Letonia", groupNumber: 0 },
+    GE: { value: "ლატვია", groupNumber: 0 },
+    AM: { value: "Latviya", groupNumber: 0 },
+    AZ: { value: "Latviya", groupNumber: 0 },
   },
   LT: { // Lithuania in different languages
     PT: { value: "Lituânia", groupNumber: 0 },
@@ -1333,6 +1417,9 @@ export const countryTranslations = {
     MT: { value: "Litwanja", groupNumber: 0 },
     LU: { value: "Litauen", groupNumber: 0 },
     XK: { value: "Lituania", groupNumber: 0 },
+    GE: { value: "ლიტვა", groupNumber: 0 },
+    AM: { value: "Litva", groupNumber: 0 },
+    AZ: { value: "Litva", groupNumber: 0 },
   },
   BY: { // Belarus in different languages
     PT: { value: "Bielorrússia", groupNumber: 0 },
@@ -1377,6 +1464,9 @@ export const countryTranslations = {
     MT: { value: "Belarus", groupNumber: 0 },
     LU: { value: "Wäissrussland", groupNumber: 0 },
     XK: { value: "Bjellorusia", groupNumber: 0 },
+    GE: { value: "ბელარუსი", groupNumber: 0 },
+    AM: { value: "delays", groupNumber: 0 },
+    AZ: { value: "Belarus", groupNumber: 0 },
   },
   MD: { // Moldova in different languages
     PT: { value: "Moldávia", groupNumber: 0 },
@@ -1421,6 +1511,9 @@ export const countryTranslations = {
     MT: { value: "Moldova", groupNumber: 0 },
     LU: { value: "Moldawien", groupNumber: 0 },
     XK: { value: "Moldavia", groupNumber: 0 },
+    GE: { value: "მოლდოვა", groupNumber: 0 },
+    AM: { value: "Moldova", groupNumber: 0 },
+    AZ: { value: "Moldova", groupNumber: 0 },
   },
   NO: { // Norway in different languages
     PT: { value: "Noruega", groupNumber: 0 },
@@ -1465,6 +1558,9 @@ export const countryTranslations = {
     MT: { value: "Norveġja", groupNumber: 0 },
     LU: { value: "Norwegen", groupNumber: 0 },
     XK: { value: "Norvegjia", groupNumber: 0 },
+    GE: { value: "ნორვეგია", groupNumber: 0 },
+    AM: { value: "Norvegiya", groupNumber: 0 },
+    AZ: { value: "Norveç", groupNumber: 0 },
   },
   SE: { // Sweden in different languages
     PT: { value: "Suécia", groupNumber: 0 },
@@ -1509,6 +1605,9 @@ export const countryTranslations = {
     MT: { value: "Żvezja", groupNumber: 0 },
     LU: { value: "Schweden", groupNumber: 0 },
     XK: { value: "Suedia", groupNumber: 0 },
+    GE: { value: "შვედეთი", groupNumber: 0 },
+    AM: { value: "Švediya", groupNumber: 0 },
+    AZ: { value: "İsveç", groupNumber: 0 },
   },
   FI: { // Finland in different languages
     PT: { value: "Finlândia", groupNumber: 0 },
@@ -1553,6 +1652,9 @@ export const countryTranslations = {
     MT: { value: "Finlandja", groupNumber: 0 },
     LU: { value: "Finnland", groupNumber: 0 },
     XK: { value: "Finlanda", groupNumber: 0 },
+    GE: { value: "ფინეთი", groupNumber: 0 },
+    AM: { value: "Finlandiya", groupNumber: 0 },
+    AZ: { value: "Finlandiya", groupNumber: 0 },
   },
   DK: { // Denmark in different languages
     PT: { value: "Dinamarca", groupNumber: 0 },
@@ -1597,6 +1699,9 @@ export const countryTranslations = {
     MT: { value: "Danimarka", groupNumber: 0 },
     LU: { value: "Dänemark", groupNumber: 0 },
     XK: { value: "Danimarka", groupNumber: 0 },
+    GE: { value: "დანია", groupNumber: 0 },
+    AM: { value: "Daniya", groupNumber: 0 },
+    AZ: { value: "Danimarka", groupNumber: 0 },
   },
   PT: { // Portugal in different languages
     PT: { value: "Portugal", groupNumber: 0 },
@@ -1641,6 +1746,9 @@ export const countryTranslations = {
     MT: { value: "Portugall", groupNumber: 0 },
     LU: { value: "Portugal", groupNumber: 0 },
     XK: { value: "Portugalia", groupNumber: 0 },
+    GE: { value: "პორტუგალია", groupNumber: 0 },
+    AM: { value: "Portugaliya", groupNumber: 0 },
+    AZ: { value: "Portuqaliya", groupNumber: 0 },
   },
   AD: { // Andorra in different languages
     PT: { value: "Andorra", groupNumber: 0 },
@@ -1685,6 +1793,9 @@ export const countryTranslations = {
     MT: { value: "Andorra", groupNumber: 0 },
     LU: { value: "Andorra", groupNumber: 0 },
     XK: { value: "Andorra", groupNumber: 0 },
+    GE: { value: "ანდორა", groupNumber: 0 },
+    AM: { value: "Delays", groupNumber: 0 },
+    AZ: { value: "Andorra", groupNumber: 0 },
   },
   MC: { // Monaco in different languages
     PT: { value: "Mónaco", groupNumber: 0 },
@@ -1729,6 +1840,9 @@ export const countryTranslations = {
     MT: { value: "Monako", groupNumber: 0 },
     LU: { value: "Monaco", groupNumber: 0 },
     XK: { value: "Monako", groupNumber: 0 },
+    GE: { value: "მონაკო", groupNumber: 0 },
+    AM: { value: "Monako", groupNumber: 0 },
+    AZ: { value: "Monako", groupNumber: 0 },
   },
   LI: { // Liechtenstein in different languages
     PT: { value: "Listenstaine", groupNumber: 0 },
@@ -1773,6 +1887,9 @@ export const countryTranslations = {
     MT: { value: "Liechtenstein", groupNumber: 0 },
     LU: { value: "Liechtenstein", groupNumber: 0 },
     XK: { value: "Lihtenshtajn", groupNumber: 0 },
+    GE: { value: "ლიხტენშტაინი", groupNumber: 0 },
+    AM: { value: "Lixtdelays", groupNumber: 0 },
+    AZ: { value: "Lixtenşteyn", groupNumber: 0 },
   },
   SM: { // San Marino in different languages
     PT: { value: "San Marino", groupNumber: 0 },
@@ -1817,6 +1934,9 @@ export const countryTranslations = {
     MT: { value: "San Marino", groupNumber: 0 },
     LU: { value: "San Marino", groupNumber: 0 },
     XK: { value: "San Marino", groupNumber: 0 },
+    GE: { value: "სან-მარინო", groupNumber: 0 },
+    AM: { value: "San Marino", groupNumber: 0 },
+    AZ: { value: "San-Marino", groupNumber: 0 },
   },
   VA: { // Vatican City in different languages
     PT: { value: "Cidade do Vaticano", groupNumber: 0 },
@@ -1861,6 +1981,9 @@ export const countryTranslations = {
     MT: { value: "Belt il-Vatikan", groupNumber: 0 },
     LU: { value: "Vatikanstad", groupNumber: 0 },
     XK: { value: "Vatikani", groupNumber: 0 },
+    GE: { value: "ვატიკანი", groupNumber: 0 },
+    AM: { value: "Delays", groupNumber: 0 },
+    AZ: { value: "Vatikan", groupNumber: 0 },
   },
   CH: { // Switzerland in different languages
     PT: { value: "Suíça", groupNumber: 0 },
@@ -1905,6 +2028,9 @@ export const countryTranslations = {
     MT: { value: "Svizzera", groupNumber: 0 },
     LU: { value: "Schwäiz", groupNumber: 0 },
     XK: { value: "Zvicra", groupNumber: 0 },
+    GE: { value: "შვეიცარია", groupNumber: 0 },
+    AM: { value: "Šveycdelays", groupNumber: 0 },
+    AZ: { value: "İsveçrə", groupNumber: 0 },
   },
   MK: { // North Macedonia in different languages
     PT: { value: "Macedónia do Norte", groupNumber: 0 },
@@ -1949,6 +2075,9 @@ export const countryTranslations = {
     MT: { value: "Maċedonja ta' Fuq", groupNumber: 0 },
     LU: { value: "Nordmazedonien", groupNumber: 0 },
     XK: { value: "Maqedonia e Veriut", groupNumber: 0 },
+    GE: { value: "ჩრდილოეთ მაკედონია", groupNumber: 0 },
+    AM: { value: "Delays Makeddelays", groupNumber: 0 },
+    AZ: { value: "Şimali Makedoniya", groupNumber: 0 },
   },
   ME: { // Montenegro in different languages
     PT: { value: "Montenegro", groupNumber: 0 },
@@ -1993,6 +2122,9 @@ export const countryTranslations = {
     MT: { value: "Montenegro", groupNumber: 0 },
     LU: { value: "Montenegro", groupNumber: 0 },
     XK: { value: "Mali i Zi", groupNumber: 0 },
+    GE: { value: "მონტენეგრო", groupNumber: 0 },
+    AM: { value: "Montenegro", groupNumber: 0 },
+    AZ: { value: "Monteneqro", groupNumber: 0 },
   },
   XK: { // Kosovo in different languages
     PT: { value: "Kosovo", groupNumber: 0 },
@@ -2037,6 +2169,9 @@ export const countryTranslations = {
     MT: { value: "Kosovo", groupNumber: 0 },
     LU: { value: "Kosovo", groupNumber: 0 },
     XK: { value: "Kosova", groupNumber: 0 },
+    GE: { value: "კოსოვო", groupNumber: 0 },
+    AM: { value: "Kosovo", groupNumber: 0 },
+    AZ: { value: "Kosovo", groupNumber: 0 },
   },
   GE: { // Georgia in different languages
     PT: { value: "Geórgia", groupNumber: 0 },
@@ -2081,6 +2216,9 @@ export const countryTranslations = {
     MT: { value: "Ġeorġja", groupNumber: 0 },
     LU: { value: "Georgien", groupNumber: 0 },
     XK: { value: "Gjeorgjia", groupNumber: 0 },
+    GE: { value: "საქართველო", groupNumber: 0 },
+    AM: { value: "Vrastan", groupNumber: 0 },
+    AZ: { value: "Gürcüstan", groupNumber: 0 },
   },
   AM: { // Armenia in different languages
     PT: { value: "Arménia", groupNumber: 0 },
@@ -2125,6 +2263,9 @@ export const countryTranslations = {
     MT: { value: "Armenja", groupNumber: 0 },
     LU: { value: "Armenien", groupNumber: 0 },
     XK: { value: "Armenia", groupNumber: 0 },
+    GE: { value: "სომხეთი", groupNumber: 0 },
+    AM: { value: "Hayastan", groupNumber: 0 },
+    AZ: { value: "Ermənistan", groupNumber: 0 },
   },
   IS: { // Iceland in different languages
     PT: { value: "Islândia", groupNumber: 0 },
@@ -2169,6 +2310,9 @@ export const countryTranslations = {
     MT: { value: "Islanda", groupNumber: 0 },
     LU: { value: "Island", groupNumber: 0 },
     XK: { value: "Islanda", groupNumber: 0 },
+    GE: { value: "ისლანდია", groupNumber: 0 },
+    AM: { value: "Islandiya", groupNumber: 0 },
+    AZ: { value: "İslandiya", groupNumber: 0 },
   },
   AZ: { // Azerbaijan in different languages
     PT: { value: "Azerbaijão", groupNumber: 0 },
@@ -2213,6 +2357,9 @@ export const countryTranslations = {
     MT: { value: "Ażerbajġan", groupNumber: 0 },
     LU: { value: "Aserbaidschan", groupNumber: 0 },
     XK: { value: "Azerbajxhan", groupNumber: 0 },
+    GE: { value: "აზერბაიჯანი", groupNumber: 0 },
+    AM: { value: "Atrpatakan", groupNumber: 0 },
+    AZ: { value: "Azərbaycan", groupNumber: 0 },
   },
 };
 
