@@ -67,7 +67,7 @@ function App() {
       return selectedCountry === code ? "#2563eb" : "#ffffff"
     }
 
-    return "#ffffff"
+    return "#e5e7eb"
   }
 
   const isClickable = (geo) => {
@@ -106,13 +106,15 @@ function App() {
                 style={{
                   default: { outline: 'none' },
                   hover: {
-                    fill: isClickable(geo) ? '#bfe3ff' : '#ffffff',
+                    fill: isClickable(geo) ? '#bfe3ff' : '#e5e7eb',
                     outline: 'none',
                     cursor: isClickable(geo) ? 'pointer' : 'default'
                   },
                   pressed: { outline: 'none' },
                 }}
-              />
+              >
+                <title>{geo.properties.name}</title>
+              </Geography>
             ))
           }
         </Geographies>
