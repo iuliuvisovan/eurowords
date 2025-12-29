@@ -180,7 +180,7 @@ function App() {
       ? [1, ...groups.filter((group) => group !== 1).sort((a, b) => a - b)]
       : groups.sort((a, b) => a - b)
 
-    const greenHue = 150
+    const greenHue = 100
     const orangeHue = -170
     const steps = Math.max(ordered.length - 1, 1)
     const hueStep = (orangeHue - greenHue) / steps
