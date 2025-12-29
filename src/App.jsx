@@ -180,25 +180,25 @@ function App() {
       ? [1, ...groups.filter((group) => group !== 1).sort((a, b) => a - b)]
       : groups.sort((a, b) => a - b)
 
-    if (ordered.length === 2) {
-      map[ordered[0]] = "#00ff88"
-      map[ordered[1]] = "#ff7a00"
-      return map
-    }
+    const greenHue = 150
+    const orangeHue = -170
+    const steps = Math.max(ordered.length - 1, 1)
+    const hueStep = (orangeHue - greenHue) / steps
 
-    if (ordered.length === 3) {
-      map[ordered[0]] = "#00ff88"
-      map[ordered[1]] = "#ff7a00"
-      map[ordered[2]] = "hsl(210 100% 50%)"
-      return map
-    }
+    ordered.forEach((group, index) => {
+      const hue = greenHue + hueStep * index
+      map[group] = { h: hue, s: 100, l: 50 }
+    })
 
     return map
   }, [selectedCountry, translations])
 
   const getGroupColor = (groupNumber, alpha) => {
-    const hex = groupColorMap[groupNumber] || groupBaseColors[groupNumber] || groupBaseColors[0]
-    return toRgba(hex, alpha)
+    const color = groupColorMap[groupNumber] || groupBaseColors[groupNumber] || groupBaseColors[0]
+    if (typeof color === "string") {
+      return toRgba(color, alpha)
+    }
+    return `hsl(${color.h} ${color.s}% ${color.l}% / ${alpha})`
   }
 
   const getBaseLabelSize = (name) => {
