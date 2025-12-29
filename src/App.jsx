@@ -27,6 +27,59 @@ const flagOverrides = {
   XK: "🇽🇰",
 }
 
+const countryLanguages = {
+  PT: "Portuguese",
+  ES: "Spanish",
+  FR: "French",
+  AD: "Catalan",
+  BE: "Dutch/French/German",
+  NL: "Dutch",
+  DE: "German",
+  LI: "German",
+  CH: "German/French/Italian/Romansh",
+  AT: "German",
+  IT: "Italian",
+  MC: "French",
+  SM: "Italian",
+  VA: "Italian/Latin",
+  SI: "Slovene",
+  HR: "Croatian",
+  BA: "Bosnian/Serbian/Croatian",
+  RS: "Serbian",
+  ME: "Montenegrin",
+  AL: "Albanian",
+  MK: "Macedonian",
+  GR: "Greek",
+  BG: "Bulgarian",
+  RO: "Romanian",
+  MD: "Romanian",
+  UA: "Ukrainian",
+  BY: "Belarusian/Russian",
+  PL: "Polish",
+  CZ: "Czech",
+  SK: "Slovak",
+  HU: "Hungarian",
+  LT: "Lithuanian",
+  LV: "Latvian",
+  EE: "Estonian",
+  FI: "Finnish/Swedish",
+  SE: "Swedish",
+  NO: "Norwegian",
+  DK: "Danish",
+  IE: "Irish/English",
+  GB: "English",
+  IS: "Icelandic",
+  RU: "Russian",
+  TR: "Turkish",
+  GE: "Georgian",
+  AM: "Armenian",
+  AZ: "Azerbaijani",
+  CY: "Greek/Turkish",
+  MT: "Maltese/English",
+  LU: "Luxembourgish/French/German",
+  XK: "Albanian/Serbian",
+}
+
 const getFlagEmoji = (code) => {
   if (!code) return ""
   if (flagOverrides[code]) return flagOverrides[code]
@@ -78,6 +131,13 @@ function App() {
     return code && availableCountryCodes.has(code)
   }
 
+  const getHoverLabel = (geo) => {
+    const name = geo.properties.name
+    const code = geoNameToCode[name]
+    const language = code ? countryLanguages[code] : null
+    return language ? `${name} - ${language}` : name
+  }
+
   return (
     <div className="app">
       <div className="floating-hint">
@@ -115,7 +175,7 @@ function App() {
                 stroke="#90a4b8"
                 strokeWidth={0.5}
                 onClick={() => handleGeoClick(geo)}
-                onMouseEnter={() => setHoveredCountry(geo.properties.name)}
+                onMouseEnter={() => setHoveredCountry(getHoverLabel(geo))}
                 onMouseLeave={() => setHoveredCountry(null)}
                 onMouseMove={(event) => {
                   setCursorPos({ x: event.clientX, y: event.clientY })
