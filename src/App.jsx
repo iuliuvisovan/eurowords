@@ -10,9 +10,17 @@ import './App.css'
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"
 
-const geoNameToCode = Object.fromEntries(
-  Object.entries(europeanCountries).map(([code, data]) => [data.name, code])
-)
+const geoNameToCode = {
+  ...Object.fromEntries(
+    Object.entries(europeanCountries).map(([code, data]) => [data.name, code])
+  ),
+  "Bosnia and Herzegovina": "BA",
+  "Bosnia and Herz.": "BA",
+  "Bosnia Herzegovina": "BA",
+  "Bosnia-Herzegovina": "BA",
+  "Macedonia": "MK",
+  "Republic of North Macedonia": "MK",
+}
 const availableCountryCodes = new Set(Object.keys(countryTranslations))
 
 function App() {
