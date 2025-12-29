@@ -216,17 +216,14 @@ function App() {
                 textAnchor="middle"
                 className={`country-label ${isSelected ? 'selected' : ''}`}
               >
-                {`${selectedCountryFlag} ${translation}`}
+                {`${getFlagEmoji(code)} ${translation}`}
               </text>
             </Marker>
           )
         })}
-        {hoveredCountryCode && europeanCountries[hoveredCountryCode] && (
+        {!selectedCountry && hoveredCountryCode && europeanCountries[hoveredCountryCode] && (
           <Marker
-            coordinates={[
-              europeanCountries[hoveredCountryCode].coordinates[0],
-              europeanCountries[hoveredCountryCode].coordinates[1] - 1.2,
-            ]}
+            coordinates={europeanCountries[hoveredCountryCode].coordinates}
           >
             <text textAnchor="middle" className="hover-flag">
               {getFlagEmoji(hoveredCountryCode)}
