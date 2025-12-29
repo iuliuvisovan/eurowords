@@ -217,12 +217,22 @@ function App() {
           if (!translation) return null
 
           const isSelected = code === selectedCountry
-
+          const labelOffsets = {
+            NO: { lat: -3, dx: 0 },
+            SE: { lat: -3, dx: -50 },
+            FI: { lat: -3, dx: 0 },
+          }
+          const labelCoords = [
+            data.coordinates[0],
+            data.coordinates[1] + (labelOffsets[code]?.lat || 0),
+          ]
+          const labelDx = labelOffsets[code]?.dx || 0
           return (
-            <Marker key={code} coordinates={data.coordinates}>
+            <Marker key={code} coordinates={labelCoords}>
               <text
                 textAnchor="middle"
                 className={`country-label ${isSelected ? 'selected' : ''}`}
+                dx={labelDx}
               >
                 {`${getFlagEmoji(code)} ${translation}`}
               </text>
