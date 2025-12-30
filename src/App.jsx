@@ -217,9 +217,7 @@ function App() {
             {selectedCountryFlag} What "
             <span className="title-country">{selectedCountryName}</span>
             " is called in different European languages
-            {Object.keys(groupColorMap).length > 1 && (
-              <div className="group-hint">Names that share the same root are grouped by color.</div>
-            )}
+            <div className="group-hint">Names that share the same root are grouped by color.</div>
           </>
         ) : (
           "Click on a country"
