@@ -202,11 +202,11 @@ function App() {
   }
 
   const getBaseLabelSize = (name) => {
-    if (!name) return 8
+    if (!name) return 10
     if (name.length >= 22) return 6
     if (name.length >= 18) return 6.5
     if (name.length >= 14) return 7
-    return 8
+    return 10
   }
 
   return (
