@@ -1573,7 +1573,7 @@ export const countryTranslations = {
     XK: { value: "Suedia", groupNumber: 1 },
     GE: { value: "Shvedeti", groupNumber: 1 },
     AM: { value: "Švediya", groupNumber: 1 },
-    AZ: { value: "İsveç", groupNumber: 1 },
+    AZ: { value: "İsveç", groupNumber: 1 }
   },
   FI: { // Finland in different languages
     PT: { value: "Finlândia", groupNumber: 0 },
