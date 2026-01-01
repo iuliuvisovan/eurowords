@@ -316,6 +316,8 @@ function App() {
             ME: { lat: 0, dx: 0, dy: -5 },
             XK: { lat: 0, dx: 0, dy: 2 },
             BG: { lat: 0, dx: 5, dy: -3 },
+            AM: { lat: 0, dx: 0, dy: 7 },
+            HU: { lat: 0, dx: 0, dy: 5 },
           }
           const labelCoords = [
             data.coordinates[0],
