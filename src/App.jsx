@@ -155,6 +155,7 @@ function App() {
     const language = code ? countryLanguages[code] : null
     return language ? `${name} - ${language}` : name
   }
+  
 
   const toRgba = (hex, alpha) => {
     const value = hex.replace("#", "")
@@ -296,6 +297,8 @@ function App() {
             })
           }
         </Geographies>
+
+         
 
         {/* Render country name labels */}
         {selectedCountry && Object.entries(europeanCountries).map(([code, data]) => {
