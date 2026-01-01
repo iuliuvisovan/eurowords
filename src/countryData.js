@@ -191,9 +191,9 @@ export const countryTranslations = {
     MT: { value: "Ir-Renju Unit", groupNumber: 1 },
     LU: { value: "Vereenegt Kinnekräich", groupNumber: 1 },
     XK: { value: "Mbretëria e Bashkuar", groupNumber: 1 },
-    GE: { value: "Gaertianebuli samepo", groupNumber: 0 },
-    AM: { value: "United Kingdom", groupNumber: 0 },
-    AZ: { value: "Birləşmiş Krallıq", groupNumber: 0 },
+    GE: { value: "Gaertianebuli samepo", groupNumber: 1 },
+    AM: { value: "Miatsyal Tagavorutyun", groupNumber: 1 },
+    AZ: { value: "Birleshmish Kralliq", groupNumber: 1 },
   },
   FR: { // France in different languages
     PT: { value: "França", groupNumber: 1 },
