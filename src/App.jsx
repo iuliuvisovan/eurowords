@@ -214,7 +214,7 @@ function App() {
       <div className="floating-hint">
         {selectedCountryName ? (
           <>
-            {selectedCountryFlag} What "
+            {selectedCountryFlag} This is what "
             <span className="title-country">{selectedCountryName}</span>
             " is called in different European languages
             <div className="group-hint">Names that share the same root are grouped by color.</div>
