@@ -318,7 +318,7 @@ export const countryTranslations = {
     BY: { value: "Italiya", groupNumber: 1 },
     PL: { value: "Włochy", groupNumber: 2 },
     CZ: { value: "Itálie", groupNumber: 1 },
-    SK: { value: "Taliansko", groupNumber: 3 },
+    SK: { value: "Taliansko", groupNumber: 1 },
     HU: { value: "Olaszország", groupNumber: 4 },
     LT: { value: "Italija", groupNumber: 1 },
     LV: { value: "Itālija", groupNumber: 1 },
