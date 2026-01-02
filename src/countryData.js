@@ -1275,8 +1275,8 @@ export const countryTranslations = {
     MT: { value: "Bosnja u Ħerzegovina", groupNumber: 1 },
     LU: { value: "Bosnien an Herzegowina", groupNumber: 1 },
     XK: { value: "Bosnja dhe Hercegovina", groupNumber: 1 },
-    GE: { value: "Bosnia da hertsegovina", groupNumber: 1 },
-    AM: { value: "Bosnia and Herzegovina", groupNumber: 1 },
+    GE: { value: "Bosnia da Hertsegovina", groupNumber: 1 },
+    AM: { value: "Bosnia yev Herzegovina", groupNumber: 1 },
     AZ: { value: "Bosniya və Herseqovina", groupNumber: 1 },
   },
   EE: { // Estonia in different languages
