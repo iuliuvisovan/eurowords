@@ -1204,7 +1204,7 @@ export const countryTranslations = {
     AL: { value: "Serbia", groupNumber: 1 },
     MK: { value: "Srbija", groupNumber: 1 },
     GR: { value: "Servia", groupNumber: 1 },
-    BG: { value: "Sarbia", groupNumber: 1 },
+    BG: { value: "Sărbiya", groupNumber: 1 },
     RO: { value: "Serbia", groupNumber: 1 },
     MD: { value: "Serbia", groupNumber: 1 },
     UA: { value: "Serbiya", groupNumber: 1 },
