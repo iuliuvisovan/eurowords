@@ -5,8 +5,8 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  font-family: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
-  background: linear-gradient(180deg, #cfe8fb 0%, #9ec7e8 55%, #7fb2dd 100%);
+  font-family: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  background: #cfe8fb;
 }
 
 .floating-hint {
@@ -48,8 +48,13 @@
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
 }
 
 .map {
@@ -79,7 +84,7 @@
 }
 
 .country-label {
-  font-family: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
   font-size: 9px;
   font-weight: 500;
   fill: #065f46;
