@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import {
   ComposableMap,
   Geographies,
@@ -104,6 +104,7 @@ function App() {
   const [hoveredCountry, setHoveredCountry] = useState(null)
   const [hoveredCountryCode, setHoveredCountryCode] = useState(null)
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 })
+  const [canHover, setCanHover] = useState(true)
   const selectedCountryName = selectedCountry
     ? europeanCountries[selectedCountry]?.name
     : null
@@ -115,6 +116,19 @@ function App() {
     if (!selectedCountry) return {}
     return countryTranslations[selectedCountry] || {}
   }, [selectedCountry])
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !window.matchMedia) return
+    const media = window.matchMedia("(hover: hover) and (pointer: fine)")
+    const update = () => setCanHover(media.matches)
+    update()
+    if (media.addEventListener) {
+      media.addEventListener("change", update)
+      return () => media.removeEventListener("change", update)
+    }
+    media.addListener(update)
+    return () => media.removeListener(update)
+  }, [])
 
   const handleGeoClick = (geo) => {
     const name = geo.properties.name
@@ -224,7 +238,7 @@ function App() {
           "Click on a country"
         )}
       </div>
-      {hoveredCountry && (
+      {canHover && hoveredCountry && (
         <div
           className="hover-tooltip"
           style={{
@@ -272,24 +286,29 @@ function App() {
                   strokeWidth={0.5}
                   onClick={() => handleGeoClick(geo)}
                   onMouseEnter={() => {
+                    if (!canHover) return
                     setHoveredCountry(getHoverLabel(geo))
                     setHoveredCountryCode(code || null)
                   }}
                   onMouseLeave={() => {
+                    if (!canHover) return
                     setHoveredCountry(null)
                     setHoveredCountryCode(null)
                   }}
                   onMouseMove={(event) => {
+                    if (!canHover) return
                     setCursorPos({ x: event.clientX, y: event.clientY })
                   }}
                   className={clickable ? 'clickable' : ''}
                   style={{
                     default: { outline: 'none' },
-                    hover: {
-                      fill: hoverFill,
-                      outline: 'none',
-                      cursor: clickable ? 'pointer' : 'default'
-                    },
+                    hover: canHover
+                      ? {
+                        fill: hoverFill,
+                        outline: 'none',
+                        cursor: clickable ? 'pointer' : 'default'
+                      }
+                      : { outline: 'none' },
                     pressed: { outline: 'none' },
                   }}
                 />
@@ -351,7 +370,7 @@ function App() {
             </Marker>
           )
         })}
-        {!selectedCountry && hoveredCountryCode && europeanCountries[hoveredCountryCode] && (
+        {!selectedCountry && canHover && hoveredCountryCode && europeanCountries[hoveredCountryCode] && (
           <Marker
             coordinates={europeanCountries[hoveredCountryCode].coordinates}
           >
