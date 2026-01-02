@@ -1154,7 +1154,7 @@ export const countryTranslations = {
     BA: { value: "Bugarska", groupNumber: 1 },
     RS: { value: "Bugarska", groupNumber: 1 },
     ME: { value: "Bugarska", groupNumber: 1 },
-    AL: { value: "Bullgari", groupNumber: 1 },
+    AL: { value: "Bullgaria", groupNumber: 1 },
     MK: { value: "Bugarija", groupNumber: 1 },
     GR: { value: "Voulgaria", groupNumber: 1 },
     BG: { value: "Balgariya", groupNumber: 1 },
