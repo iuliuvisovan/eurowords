@@ -135,7 +135,7 @@ function App() {
     const code = geoNameToCode[name]
 
     if (code && availableCountryCodes.has(code)) {
-      setSelectedCountry(selectedCountry === code ? null : code)
+      setSelectedCountry(code)
     }
   }
 
