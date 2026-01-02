@@ -343,6 +343,7 @@ function App() {
             BG: { lat: 0, dx: 5, dy: -3 },
             AM: { lat: 0, dx: 0, dy: 7 },
             HU: { lat: 0, dx: 0, dy: 5 },
+            MT: { lat: 0, dx: 0, dy: 13 },
           }
           const labelCoords = [
             data.coordinates[0],
