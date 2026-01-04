@@ -80,7 +80,7 @@ export const countryTranslations = {
     RO: { value: "Germania", groupNumber: 3 },
     MD: { value: "Germania", groupNumber: 3 },
     UA: { value: "Nimechchyna", groupNumber: 4 },
-    BY: { value: "Njamjéččyna", groupNumber: 3 },
+    BY: { value: "Njamjéččyna", groupNumber: 4 },
     PL: { value: "Niemcy", groupNumber: 4 },
     CZ: { value: "Německo", groupNumber: 4 },
     SK: { value: "Nemecko", groupNumber: 4 },
