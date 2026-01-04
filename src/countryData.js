@@ -1740,7 +1740,7 @@ export const countryTranslations = {
     IE: { value: "an Phortaingéil", groupNumber: 1 },
     GB: { value: "Portugal", groupNumber: 1 },
     RU: { value: "Portugaliya", groupNumber: 1 },
-    TR: { value: "Portekiz", groupNumber: 2 },
+    TR: { value: "Portekiz", groupNumber: 1 },
     CY: { value: "Portugalia", groupNumber: 1 },
     MT: { value: "Portugall", groupNumber: 1 },
     LU: { value: "Portugal", groupNumber: 1 },
