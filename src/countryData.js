@@ -2019,7 +2019,7 @@ export const countryTranslations = {
     SE: { value: "Schweiz", groupNumber: 1 },
     NO: { value: "Sveits", groupNumber: 1 },
     DK: { value: "Schweiz", groupNumber: 1 },
-    IE: { value: "an Eilvéis", groupNumber: 1 },
+    IE: { value: "an Eilvéis", groupNumber: 2 },
     GB: { value: "Switzerland", groupNumber: 1 },
     RU: { value: "Shveytsariya", groupNumber: 1 },
     TR: { value: "İsviçre", groupNumber: 1 },
