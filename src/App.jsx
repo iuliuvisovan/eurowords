@@ -6,9 +6,10 @@ import {
   Marker,
 } from 'react-simple-maps'
 import { europeanCountries, countryTranslations } from './countryData'
+import countriesTopoJson from './countries-50m.json'
 import './App.css'
 
-const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"
+const geoUrl = countriesTopoJson
 
 const geoNameToCode = {
   ...Object.fromEntries(
